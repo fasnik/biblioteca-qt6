@@ -1,0 +1,34 @@
+@startuml Biblioteca
+
+Entity Publicação {
+    id
+    --
+    Nome
+    Ano
+    Autor
+    Tema
+}
+
+Entity Usuário{
+    Id
+    --
+    Nome
+    Telefone
+    Email
+}
+
+Entity Empréstimo <<R, red>> {
+    Id_Publicação
+    Id_Usuário
+    --
+    Data_Empréstimo
+    Data_Devolução
+    Status
+}
+
+
+Publicação -- Empréstimo
+Empréstimo -- Usuário
+
+
+@enduml
