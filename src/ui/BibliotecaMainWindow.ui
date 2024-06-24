@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Felipe Silva</author>
+ <class>BibliotecaApp</class>
+ <widget class="QMainWindow" name="BibliotecaApp">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>572</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Biblioteca Escola X</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">centralwidget{
+qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255))
+}</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>771</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+     </property>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="welcome">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Biblioteca App</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>771</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuUsuarios">
+    <property name="title">
+     <string>Usuários</string>
+    </property>
+    <addaction name="actionAddUser"/>
+    <addaction name="actionQueryUser"/>
+   </widget>
+   <widget class="QMenu" name="menuPublicacoes">
+    <property name="title">
+     <string>Publicações</string>
+    </property>
+    <addaction name="actionAddPublicacao"/>
+    <addaction name="actionQueryPublicacao"/>
+   </widget>
+   <widget class="QMenu" name="menuEmprestimos">
+    <property name="title">
+     <string>Empréstimos</string>
+    </property>
+    <addaction name="actionregisterCheckOut"/>
+    <addaction name="actionregisterDevolucao"/>
+   </widget>
+   <addaction name="menuUsuarios"/>
+   <addaction name="menuPublicacoes"/>
+   <addaction name="menuEmprestimos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddUser">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Adicionar Usuário</string>
+   </property>
+  </action>
+  <action name="actionQueryUser">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Consultar Usuário</string>
+   </property>
+  </action>
+  <action name="actionAddPublicacao">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Adicionar Publicação</string>
+   </property>
+  </action>
+  <action name="actionQueryPublicacao">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Consultar Publicação</string>
+   </property>
+  </action>
+  <action name="actionregisterCheckOut">
+   <property name="text">
+    <string>Registrar Empréstimo</string>
+   </property>
+  </action>
+  <action name="actionregisterDevolucao">
+   <property name="text">
+    <string>Fazer Devolução</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
